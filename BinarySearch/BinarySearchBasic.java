@@ -1,14 +1,12 @@
 package BinarySearch;
 
 import java.util.Scanner;
- 
-import java.util.Scanner;
 
 public class  BinarySearchBasic{
-    static int linearSearch(int element,int[] array){
+    static int binarySearch(int element,int[] array){
         int left=0,right=array.length-1;
 
-        while (left<right){
+        while (left<=right){
             int mid=(left+right)/2;
             if(array[mid]==element)
                 return mid;
@@ -32,7 +30,7 @@ public class  BinarySearchBasic{
 
         System.out.println("Enter the element whose index should be found");
         int element=scannerobject.nextInt();
-        int index= linearSearch(element,array);
+        int index= binarySearch(element,array);
         if(index==-1)
             System.out.println("The element not found");
         else
