@@ -41,12 +41,10 @@ public class CycleInList {
         list.head = new  Node1(1);
         list.head.next = new  Node1(2);
 
-        list.head.next.next =   new Node1(3);
-        Node1 cycle =head.next.next;
-        System.out.println("hkg"+cycle.data);
+        list.head.next.next =   new Node1(3); 
         list.head.next.next.next = new  Node1(4);
         list.head.next.next.next.next=head;
- 
+
         boolean result=checkCycle(head);
         System.out.println("Cycle present : " +result);
     }
