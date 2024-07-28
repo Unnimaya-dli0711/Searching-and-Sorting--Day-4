@@ -14,14 +14,14 @@ public class Duplicates {
         for(int i=0;i<number;i++){
             array.add(scannerobject.nextInt());
         }
-        for(int i=0;i<array.size();i++){ 
+        for(int i=0;i<array.size();i++){
                 int element=array.get(i);
                 array.remove(i);
                 if(array.contains(element)){
-                    duplicates.add(element);
-                    System.out.println(element);
+                    if(!duplicates.contains(element))
+                        duplicates.add(element);
                 }
-
         }
+        System.out.println("duplicates are " +duplicates);
     }
 }
